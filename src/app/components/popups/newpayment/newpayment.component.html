@@ -1,0 +1,61 @@
+<div>
+    <h2>Formulario de pagos nuevos</h2>
+
+    <form [formGroup]="newPaymentForm" (submit)="savePayment()">
+        <!-- Debitante input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Nombre del debitante</label>
+            <input type="text" id="form4Example1" formControlName="paidBy" class="form-control "
+                placeholder="Usuario debitante" />
+        </div>
+
+        <!-- Tipo de pago input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Seleccione tipo de pago</label>
+            <select type="text" id="form4Example2" formControlName="paymentType" class="form-control"
+                placeholder="Tipo de pago">
+                <option value="Efectivo">Efectivo</option>
+                <option value="Tarjeta">Tarjeta</option>
+                <option value="Transferencia">Transferencia</option>
+            </select>
+        </div>
+        <!-- Fecha input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Selecione la fecha</label>
+            <input type="date" id="form4Example2" formControlName="date" class="form-control"
+                placeholder="Tipo de pago" />
+        </div>
+
+        <!-- Descripción input -->
+        <div class="form-outline mb-4">
+            <label class="form-label">Ingrese la descripción del pago</label>
+            <textarea formControlName="description" class="form-control" id="form4Example3" rows="4"
+                placeholder="Descripción"></textarea>
+        </div>
+
+        <!-- Voucher input -->
+        <!-- <div class="form-outline mb-4">
+            <input type="image" id="form4Example2" class="form-control" placeholder="Comprobante" />
+            <label class="form-label"></label>
+        </div> -->
+
+
+        <!-- Submit button -->
+        <div class="flex btnstyle">
+            <button type="submit" class="btnstyle btn btn-primary btn-block mb-4"
+                (click)="savePayment()">Guardar</button>
+            <button type="button" class="btnstyle btn btn-danger btn-block mb-4" (click)="closeModal()">Cerrar</button>
+        </div>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+</div>

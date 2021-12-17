@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid flex">
+        <p class="title">Listado de pagos</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <button class="btn btn-success me-4" (click)="openModal()">AGREGAR NUEVO PAGO</button>
+            <form class="d-flex">
+            </form>
+            <button class="logstyle btn btn-outline-danger" (click)="logout()">CERRAR SESIÓN</button>
+
+
+        </div>
+    </div>
+</nav>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Usuario debitante</th>
+            <th scope="col">Tipo de pago</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Comprobante</th>
+            <th scope="col">Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of paymentsDB ;let i=index">
+            <th index scope="row">{{i+1}}</th>
+            <td>{{item.paidBy}}</td>
+            <td>{{item.paymentType}}</td>
+            <td>{{item.date | date}}</td>
+            <td>{{item.description}}</td>
+            <td>IMG</td>
+            <td><button class="btn btn-danger" (click)="delPayments(item.pid)">Delete</button></td>
+        </tr>
+
+    </tbody>
+</table>

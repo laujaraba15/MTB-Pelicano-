@@ -1,0 +1,52 @@
+<div class="bodyClass centerbox">
+    <h1 class="mt-3">REGISTRO</h1>
+    <form method="post" (ngSubmit)="formRegister()" autocomplete="off" [formGroup]="registerForm">
+        <div class="txt_field">
+            <label class="text-danger" *ngIf="fieldValidation('idNumber')">*Número de identificación invalido</label>
+            <input type="number" formControlName="idNumber" name="id" placeholder="número de identificación">
+
+        </div>
+        <div class="txt_field">
+            <label class="text-danger" *ngIf="fieldValidation('name')">*Nombre invalido</label>
+            <input type="text" formControlName="name" placeholder="nombre">
+
+        </div>
+        <div class="txt_field">
+            <label class="text-danger" *ngIf="fieldValidation('lastname')">*Apellido invalido</label>
+            <input type="text" formControlName="lastname" placeholder="apellidos">
+
+        </div>
+        <div class="txt_field">
+            <label class="text-danger" *ngIf="fieldValidation('phone')">*Teléfono invalido</label>
+            <input type="number" formControlName="phone" placeholder="teléfono">
+
+        </div>
+
+        <div class="flex">
+            <label class="text-danger" *ngIf="fieldValidation('role')">*Rol invalido</label>
+            <div>Seleccionar Rol</div>
+            <select formControlName="role" class="custom-select w-75">
+                <option value="usuario">usuario</option>
+                <option value="administrador">administrador</option>
+            </select>
+        </div>
+
+        <div class="txt_field">
+            <label class="text-danger" *ngIf="fieldValidation('email')">*Email invalido</label>
+            <input type="text" formControlName="email" placeholder="correo">
+
+        </div>
+        <div class="txt_field">
+            <label class="text-danger" *ngIf="fieldValidation('password')">*Contraseña invalida</label>
+            <input type="password" formControlName="password" placeholder="contraseña">
+
+        </div>
+        <div class="centerbutton">
+            <button type="submit" (click)="formRegister" class="btn btn-success">Registrar</button>
+        </div>
+        <div class="signupLink">
+            Ya tengo cuenta <a routerLink="/signin"> Inciar Sesión</a>
+        </div>
+    </form>
+
+</div>

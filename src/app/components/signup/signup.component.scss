@@ -1,0 +1,63 @@
+.bodyClass {
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    height: auto;
+    overflow: hidden;
+    overflow-y: visible;
+    background-color: black;
+}
+.centerbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.centerbox h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+.centerbox form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.centerbutton {
+    display: flex;
+    justify-content: center;
+}
+.signupLink {
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+}
+.custom-select {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.custom-select a:hover {
+    background-color: #f1f1f1;
+    font-size: 16px;
+    border: none;
+}
